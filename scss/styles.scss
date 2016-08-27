@@ -52,3 +52,15 @@
 .item-price {
   color: $grey;
 }
+
+table.button {
+  margin-bottom: 0;
+  table {
+    td {
+      padding: map-get($button-padding, default);
+      a {
+        padding: 0px;
+      }
+    }
+  }
+}

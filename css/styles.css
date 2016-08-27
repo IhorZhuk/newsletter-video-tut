@@ -1423,3 +1423,10 @@ body.outlook p {
 
 .item-price {
   color: #666666; }
+
+table.button {
+  margin-bottom: 0; }
+  table.button table td {
+    padding: 12px 35px 12px 35px; }
+    table.button table td a {
+      padding: 0px; }

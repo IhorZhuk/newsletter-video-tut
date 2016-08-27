@@ -1,48 +1,218 @@
 <!-- Emails use the XHTML Strict doctype -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" style="background: #fbf18e; min-height: 100%;">
 <head>
   <!-- The character set should be utf-8 -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <!-- Enables media queries -->
   <meta name="viewport" content="width=device-width">
   <!-- Link to the email's CSS, which will be inlined into the email -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+@media only screen and (max-width:596px) {
+  .small-float-center {
+    margin: 0 auto !important;
+    float: none !important;
+  }
+  .small-float-center,.small-text-center {
+    text-align: center !important;
+  }
+  .small-text-left {
+    text-align: left !important;
+  }
+  .small-text-right {
+    text-align: right !important;
+  }
+}
+
+
+@media only screen and (max-width:596px) {
+  table.body table.container .hide-for-large {
+    display: block !important;
+    width: auto !important;
+    overflow: visible !important;
+  }
+}
+
+
+@media only screen and (max-width:596px) {
+  table.body table.container .row.hide-for-large {
+    display: table !important;
+    width: 100% !important;
+  }
+  table.body table.container .show-for-large {
+    display: none !important;
+    width: 0;
+    mso-hide: all;
+    overflow: hidden;
+  }
+}
+
+
+@media only screen and (max-width:596px) {
+  table.body img {
+    height: auto !important;
+  }
+  table.body center {
+    min-width: 0 !important;
+  }
+  table.body .container {
+    width: 95% !important;
+  }
+  table.body .column,table.body .columns {
+    height: auto !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  table.body .collapse .column,table.body .collapse .columns,table.body .column .column,table.body .column .columns,table.body .columns .column,table.body .columns .columns {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .body .column td.small-1,.body .column th.small-1,.body .columns td.small-1,.body .columns th.small-1,td.small-1,td.small-1 center,th.small-1,th.small-1 center {
+    display: inline-block !important;
+    width: 8.33333% !important;
+  }
+  .body .column td.small-2,.body .column th.small-2,.body .columns td.small-2,.body .columns th.small-2,td.small-2,td.small-2 center,th.small-2,th.small-2 center {
+    display: inline-block !important;
+    width: 16.66667% !important;
+  }
+  .body .column td.small-3,.body .column th.small-3,.body .columns td.small-3,.body .columns th.small-3,td.small-3,td.small-3 center,th.small-3,th.small-3 center {
+    display: inline-block !important;
+    width: 25% !important;
+  }
+  .body .column td.small-4,.body .column th.small-4,.body .columns td.small-4,.body .columns th.small-4,td.small-4,td.small-4 center,th.small-4,th.small-4 center {
+    display: inline-block !important;
+    width: 33.33333% !important;
+  }
+  .body .column td.small-5,.body .column th.small-5,.body .columns td.small-5,.body .columns th.small-5,td.small-5,td.small-5 center,th.small-5,th.small-5 center {
+    display: inline-block !important;
+    width: 41.66667% !important;
+  }
+  .body .column td.small-6,.body .column th.small-6,.body .columns td.small-6,.body .columns th.small-6,td.small-6,td.small-6 center,th.small-6,th.small-6 center {
+    display: inline-block !important;
+    width: 50% !important;
+  }
+  .body .column td.small-7,.body .column th.small-7,.body .columns td.small-7,.body .columns th.small-7,td.small-7,td.small-7 center,th.small-7,th.small-7 center {
+    display: inline-block !important;
+    width: 58.33333% !important;
+  }
+  .body .column td.small-8,.body .column th.small-8,.body .columns td.small-8,.body .columns th.small-8,td.small-8,td.small-8 center,th.small-8,th.small-8 center {
+    display: inline-block !important;
+    width: 66.66667% !important;
+  }
+  .body .column td.small-9,.body .column th.small-9,.body .columns td.small-9,.body .columns th.small-9,td.small-9,td.small-9 center,th.small-9,th.small-9 center {
+    display: inline-block !important;
+    width: 75% !important;
+  }
+  .body .column td.small-10,.body .column th.small-10,.body .columns td.small-10,.body .columns th.small-10,td.small-10,td.small-10 center,th.small-10,th.small-10 center {
+    display: inline-block !important;
+    width: 83.33333% !important;
+  }
+  .body .column td.small-11,.body .column th.small-11,.body .columns td.small-11,.body .columns th.small-11,td.small-11,td.small-11 center,th.small-11,th.small-11 center {
+    display: inline-block !important;
+    width: 91.66667% !important;
+  }
+  table.menu td,table.menu th,td.small-12,th.small-12 {
+    display: inline-block !important;
+    width: 100% !important;
+  }
+  .column td.small-12,.column th.small-12,.columns td.small-12,.columns th.small-12 {
+    display: block !important;
+    width: 100% !important;
+  }
+  table.body td.small-offset-1,table.body th.small-offset-1 {
+    margin-left: 8.33333% !important;
+    Margin-left: 8.33333% !important;
+  }
+  table.body td.small-offset-2,table.body th.small-offset-2 {
+    margin-left: 16.66667% !important;
+    Margin-left: 16.66667% !important;
+  }
+  table.body td.small-offset-3,table.body th.small-offset-3 {
+    margin-left: 25% !important;
+    Margin-left: 25% !important;
+  }
+  table.body td.small-offset-4,table.body th.small-offset-4 {
+    margin-left: 33.33333% !important;
+    Margin-left: 33.33333% !important;
+  }
+  table.body td.small-offset-5,table.body th.small-offset-5 {
+    margin-left: 41.66667% !important;
+    Margin-left: 41.66667% !important;
+  }
+  table.body td.small-offset-6,table.body th.small-offset-6 {
+    margin-left: 50% !important;
+    Margin-left: 50% !important;
+  }
+  table.body td.small-offset-7,table.body th.small-offset-7 {
+    margin-left: 58.33333% !important;
+    Margin-left: 58.33333% !important;
+  }
+  table.body td.small-offset-8,table.body th.small-offset-8 {
+    margin-left: 66.66667% !important;
+    Margin-left: 66.66667% !important;
+  }
+  table.body td.small-offset-9,table.body th.small-offset-9 {
+    margin-left: 75% !important;
+    Margin-left: 75% !important;
+  }
+  table.body td.small-offset-10,table.body th.small-offset-10 {
+    margin-left: 83.33333% !important;
+    Margin-left: 83.33333% !important;
+  }
+  table.body td.small-offset-11,table.body th.small-offset-11 {
+    margin-left: 91.66667% !important;
+    Margin-left: 91.66667% !important;
+  }
+  table.body table.columns td.expander,table.body table.columns th.expander {
+    display: none !important;
+  }
+  table.body .right-text-pad,table.body .text-pad-right {
+    padding-left: 10px !important;
+  }
+  table.body .left-text-pad,table.body .text-pad-left {
+    padding-right: 10px !important;
+  }
+  table.menu td,table.menu th {
+    width: auto !important;
+  }
+  table.menu.small-vertical td,table.menu.small-vertical th,table.menu.vertical td,table.menu.vertical th {
+    display: block !important;
+  }
+  table.body img,table.menu[align=center] {
+    width: auto !important;
+  }
+  table.button.expand,table.menu {
+    width: 100% !important;
+  }
+}
+</style>
 </head>
-<body>
-  
-  <!-- 
-    hero-image: https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/68bac409-eb07-449d-aa4e-02f4d20ea883.jpg
-    
-    t-shirt: https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/6a9e9bff-ccfe-486c-86c4-923cf2a2f32b.jpg
-    
-    sneakers:     https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/d045ef8e-c5c3-4c91-a736-931fdec2c184.jpg
-    
-    shorts: https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/bbcf016c-f597-4d1a-976b-1577e79767b4.jpg
-    -->
-    
-    <table class="body">
-      <tr>
-        <td>
-          <center data-parsed="">
+<body style="-moz-box-sizing: border-box; -ms-text-size-adjust: 100%; -webkit-box-sizing: border-box; -webkit-text-size-adjust: 100%; Margin: 0; box-sizing: border-box; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; min-width: 100%; padding: 0; text-align: left; width: 100% !important;">
+    <table class="body" style="Margin: 0; background: #fbf18e; border-collapse: collapse; border-spacing: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; height: 100%; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+      <tr style="padding: 0; text-align: left; vertical-align: top;">
+        <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+          <center data-parsed="" style="min-width: 580px; width: 100%;">
            
-           <table class="spacer float-center"><tbody><tr><td height="15px" style="font-size:15px;line-height:15px;">&#xA0;</td></tr></tbody></table> 
-           <table class="container no-bg float-center"><tbody><tr><td>
-             <table class="row"><tbody><tr>
-                   <th class="custom-pb small-12 large-6 columns first">
-      <table>
-        <tr>
-          <th>
-                 <p class="tiny-text small-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente placeat, est mollitia laudantium amet aut.</p>
+           <table class="spacer float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="15px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; hyphens: auto; line-height: 15px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
+           <table class="container no-bg float-center" style="Margin: 0 auto; background: 0 0 !important; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top; width: 580px;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+             <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;">
+                   <th class="custom-pb small-12 large-6 columns first" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 10px !important; padding-left: 16px; padding-right: 8px; text-align: left; width: 274px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                 <p class="tiny-text small-text-center" style="Margin: 0; Margin-bottom: 10px; color: #000; font-family: Arial,sans-serif; font-size: 12px; font-weight: 400; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente placeat, est mollitia laudantium amet aut.</p>
                </th>
         </tr>
       </table>
     </th>
-                   <th class="custom-pb small-12 large-6 columns last">
-      <table>
-        <tr>
-          <th>
-                 <p class="text-right small-text-center"><a href="#!" class="tiny-text basic-link">View this email in your browser</a></p>
+                   <th class="custom-pb small-12 large-6 columns last" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 10px !important; padding-left: 8px; padding-right: 16px; text-align: left; width: 274px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                 <p class="text-right small-text-center" style="Margin: 0; Margin-bottom: 10px; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: right;"><a href="#!" class="tiny-text basic-link" style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: underline;">View this email in your browser</a></p>
                </th>
         </tr>
       </table>
@@ -50,114 +220,115 @@
              </tr></tbody></table>
            </td></tr></tbody></table>
          
-         <table align="center" class="float-center">
+         <table align="center" class="float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top;">
            <tbody>
-             <tr>
-               <td>
-                 <img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/68bac409-eb07-449d-aa4e-02f4d20ea883.jpg" alt="Summer 2016">
+             <tr style="padding: 0; text-align: left; vertical-align: top;">
+               <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                 <img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/68bac409-eb07-449d-aa4e-02f4d20ea883.jpg" alt="Summer 2016" style="-ms-interpolation-mode: bicubic; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto;">
                </td>
              </tr>
            </tbody>
          </table>
                
-          <table class="spacer float-center"><tbody><tr><td height="15px" style="font-size:15px;line-height:15px;">&#xA0;</td></tr></tbody></table> 
+          <table class="spacer float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="15px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; hyphens: auto; line-height: 15px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
                
-          <table class="container float-center"><tbody><tr><td>
-            <table class="row"><tbody><tr>
-                  <th class="small-12 large-12 columns first last">
-      <table>
-        <tr>
-          <th>
-                <table class="spacer"><tbody><tr><td height="40px" style="font-size:40px;line-height:40px;">&#xA0;</td></tr></tbody></table> 
-                <p class="main-sub-heading text-center">Meet the</p>
-                <h1 class="main-heading text-center">Lorem collection</h1>
-                <table class="spacer"><tbody><tr><td height="30px" style="font-size:30px;line-height:30px;">&#xA0;</td></tr></tbody></table> 
-                <p class="main-body-p text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo quasi obcaecati sapiente tempore tenetur non consequuntur aspernatur id similique fuga esse, quaerat, eos dolore quisquam molestias molestiae velit dolor? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quam nam aut, at ipsa! Iur</p>
-                <table class="spacer"><tbody><tr><td height="30px" style="font-size:30px;line-height:30px;">&#xA0;</td></tr></tbody></table> 
-                <center data-parsed="">
-                  <table class="button float-center"><tr><td><table><tr><td><a href="#">Shop now</a></td></tr></table></td></tr></table>
+          <table class="container float-center" style="Margin: 0 auto; background: #fff; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top; width: 580px;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+            <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;">
+                  <th class="small-12 large-12 columns first last" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; text-align: left; width: 564px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                <table class="spacer" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="40px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 40px; font-weight: 400; hyphens: auto; line-height: 40px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
+                <p class="main-sub-heading text-center" style="Margin: 0; Margin-bottom: 10px; color: #666; font-family: Arial,sans-serif; font-size: 20px; font-weight: 400; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center; text-transform: uppercase;">Meet the</p>
+                <h1 class="main-heading text-center" style="Margin: 0; Margin-bottom: 0; color: inherit; font-family: Arial,sans-serif; font-size: 22px; font-weight: 700; line-height: 1.3; margin: 0; margin-bottom: 0; padding: 0; text-align: center; text-transform: uppercase; word-wrap: normal;">Lorem collection</h1>
+                <table class="spacer" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="30px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 30px; font-weight: 400; hyphens: auto; line-height: 30px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
+                <p class="main-body-p text-center" style="Margin: 0; Margin-bottom: 10px; color: #666; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 1.57143; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo quasi obcaecati sapiente tempore tenetur non consequuntur aspernatur id similique fuga esse, quaerat, eos dolore quisquam molestias molestiae velit dolor? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quam nam aut, at ipsa! Iur</p>
+                <table class="spacer" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="30px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 30px; font-weight: 400; hyphens: auto; line-height: 30px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
+                <center data-parsed="" style="min-width: 532px; width: 100%;">
+                  <table class="button float-center" style="Margin: 0 0 16px 0; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 0 16px; margin-bottom: 0; padding: 0; text-align: center; vertical-align: top; width: auto !important;"><tr style="padding: 0; text-align: left; vertical-align: top;"><td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;"><table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;"><tr style="padding: 0; text-align: left; vertical-align: top;"><td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background: 0 0; border: 2px solid #f61067; border-collapse: collapse !important; color: #f61067; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 12px 35px; text-align: left; vertical-align: top; word-wrap: break-word;"><a href="#" style="Margin: 0; border: 0 solid transparent; border-radius: 0; color: #f61067; display: inline-block; font-family: Arial,sans-serif; font-size: 16px; font-weight: 400; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none; text-transform: uppercase;">Shop now</a></td></tr></table></td></tr></table>
                 </center>
+                 <table class="spacer" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="30px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 30px; font-weight: 400; hyphens: auto; line-height: 30px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
               </th>
-<th class="expander"></th>
+<th class="expander" style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
         </tr>
       </table>
     </th>
             </tr></tbody></table>
           </td></tr></tbody></table>
                 
-          <table class="spacer float-center"><tbody><tr><td height="15px" style="font-size:15px;line-height:15px;">&#xA0;</td></tr></tbody></table> 
+          <table class="spacer float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="15px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; hyphens: auto; line-height: 15px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
           
-          <table class="container float-center"><tbody><tr><td>
-            <table class="row"><tbody><tr>
-                  <th class="custom-pb small-12 large-12 columns first last">
-      <table>
-        <tr>
-          <th>
-               <table class="spacer"><tbody><tr><td height="40px" style="font-size:40px;line-height:40px;">&#xA0;</td></tr></tbody></table> 
-                <h2 class="text-center text-uppercase">Deals of the week</h2>
+          <table class="container float-center" style="Margin: 0 auto; background: #fff; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top; width: 580px;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+            <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;">
+                  <th class="custom-pb small-12 large-12 columns first last" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 10px !important; padding-left: 16px; padding-right: 16px; text-align: left; width: 564px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+               <table class="spacer" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="40px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 40px; font-weight: 400; hyphens: auto; line-height: 40px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
+                <h2 class="text-center text-uppercase" style="Margin: 0; Margin-bottom: 0; color: inherit; font-family: Arial,sans-serif; font-size: 16px; font-weight: 700; line-height: 1.3; margin: 0; margin-bottom: 0; padding: 0; text-align: center; text-transform: uppercase; word-wrap: normal;">Deals of the week</h2>
               </th>
-<th class="expander"></th>
+<th class="expander" style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
         </tr>
       </table>
     </th>
             </tr></tbody></table>
             
-            <table class="row"><tbody><tr>
-                  <th class="small-4 large-5 columns first">
-      <table>
-        <tr>
-          <th></th>
+            <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;">
+                  <th class="small-4 large-5 columns first" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 16px; padding-right: 8px; text-align: left; width: 225.66667px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;"></th>
         </tr>
       </table>
     </th>
-                  <th class="small-4 large-2 columns">
-      <table>
-        <tr>
-          <th>
-                <div class="decorative-line"></div>
+                  <th class="small-4 large-2 columns" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 8px; padding-right: 8px; text-align: left; width: 80.66667px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                <div class="decorative-line" style="background: #666; height: 2px;"></div>
               </th>
         </tr>
       </table>
     </th>
-                  <th class="small-4 large-5 columns last">
-      <table>
-        <tr>
-          <th></th>
+                  <th class="small-4 large-5 columns last" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 8px; padding-right: 16px; text-align: left; width: 225.66667px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;"></th>
         </tr>
       </table>
     </th>
             </tr></tbody></table>
             
-            <table class="row"><tbody><tr>
-                  <th class="small-12 large-4 columns first">
-      <table>
-        <tr>
-          <th>
-                <center data-parsed=""><img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/6a9e9bff-ccfe-486c-86c4-923cf2a2f32b.jpg" alt="item" align="center" class="float-center"></center>
-                <h3 class="item-name small-text-center">Item Name</h3>
-                <p class="item-price small-text-center">$16.99</p>
+            <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;">
+                  <th class="small-12 large-4 columns first" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 16px; padding-right: 8px; text-align: left; width: 177.33333px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                <center data-parsed="" style="min-width: 145.33333px; width: 100%;"><img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/6a9e9bff-ccfe-486c-86c4-923cf2a2f32b.jpg" alt="item" align="center" class="float-center" style="-ms-interpolation-mode: bicubic; Margin: 0 auto; clear: both; display: block; float: none; margin: 0 auto; max-width: 100%; outline: none; text-align: center; text-decoration: none; width: auto;"></center>
+                <h3 class="item-name small-text-center" style="Margin: 0; Margin-bottom: 0; color: #f61067; font-family: Arial,sans-serif; font-size: 14px; font-weight: 700; line-height: 1.3; margin: 0; margin-bottom: 0; padding: 0; text-align: left; text-transform: uppercase; word-wrap: normal;">Item Name</h3>
+                <p class="item-price small-text-center" style="Margin: 0; Margin-bottom: 10px; color: #666; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">$16.99</p>
               </th>
         </tr>
       </table>
     </th>
-                  <th class="small-12 large-4 columns">
-      <table>
-        <tr>
-          <th>
-                <center data-parsed=""><img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/d045ef8e-c5c3-4c91-a736-931fdec2c184.jpg" alt="item" align="center" class="float-center"></center>
-                <h3 class="item-name small-text-center">Item Name</h3>
-                <p class="item-price small-text-center">$16.99</p>
+                  <th class="small-12 large-4 columns" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 8px; padding-right: 8px; text-align: left; width: 177.33333px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                <center data-parsed="" style="min-width: 145.33333px; width: 100%;"><img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/d045ef8e-c5c3-4c91-a736-931fdec2c184.jpg" alt="item" align="center" class="float-center" style="-ms-interpolation-mode: bicubic; Margin: 0 auto; clear: both; display: block; float: none; margin: 0 auto; max-width: 100%; outline: none; text-align: center; text-decoration: none; width: auto;"></center>
+                <h3 class="item-name small-text-center" style="Margin: 0; Margin-bottom: 0; color: #f61067; font-family: Arial,sans-serif; font-size: 14px; font-weight: 700; line-height: 1.3; margin: 0; margin-bottom: 0; padding: 0; text-align: left; text-transform: uppercase; word-wrap: normal;">Item Name</h3>
+                <p class="item-price small-text-center" style="Margin: 0; Margin-bottom: 10px; color: #666; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">$16.99</p>
               </th>
         </tr>
       </table>
     </th>
-                  <th class="small-12 large-4 columns last">
-      <table>
-        <tr>
-          <th>
-                <center data-parsed=""><img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/bbcf016c-f597-4d1a-976b-1577e79767b4.jpg" alt="item" align="center" class="float-center"></center>
-                <h3 class="item-name small-text-center">Item Name</h3>
-                <p class="item-price small-text-center">$16.99</p>
+                  <th class="small-12 large-4 columns last" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 8px; padding-right: 16px; text-align: left; width: 177.33333px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                <center data-parsed="" style="min-width: 145.33333px; width: 100%;"><img src="https://gallery.mailchimp.com/b6b8c26ff97a7240ec68e5e4b/images/bbcf016c-f597-4d1a-976b-1577e79767b4.jpg" alt="item" align="center" class="float-center" style="-ms-interpolation-mode: bicubic; Margin: 0 auto; clear: both; display: block; float: none; margin: 0 auto; max-width: 100%; outline: none; text-align: center; text-decoration: none; width: auto;"></center>
+                <h3 class="item-name small-text-center" style="Margin: 0; Margin-bottom: 0; color: #f61067; font-family: Arial,sans-serif; font-size: 14px; font-weight: 700; line-height: 1.3; margin: 0; margin-bottom: 0; padding: 0; text-align: left; text-transform: uppercase; word-wrap: normal;">Item Name</h3>
+                <p class="item-price small-text-center" style="Margin: 0; Margin-bottom: 10px; color: #666; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">$16.99</p>
               </th>
         </tr>
       </table>
@@ -165,27 +336,27 @@
             </tr></tbody></table>
           </td></tr></tbody></table>
           
-          <table class="spacer float-center"><tbody><tr><td height="15px" style="font-size:15px;line-height:15px;">&#xA0;</td></tr></tbody></table> 
+          <table class="spacer float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="15px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; hyphens: auto; line-height: 15px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
           
-          <table class="container no-bg float-center"><tbody><tr><td>
-            <table class="row"><tbody><tr>
-                  <th class="small-12 large-12 columns first last">
-      <table>
-        <tr>
-          <th>
-                <p class="text-right small-text-center">
-                  <a href="#" class="basic-link tiny-text">unsubscribe from this list</a> | 
-                  <a href="#" class="basic-link tiny-text ">unsubscribe from this list</a>
+          <table class="container no-bg float-center" style="Margin: 0 auto; background: 0 0 !important; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top; width: 580px;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+            <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;">
+                  <th class="small-12 large-12 columns first last" style="Margin: 0 auto; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; text-align: left; width: 564px;">
+      <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+          <th style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                <p class="text-right small-text-center" style="Margin: 0; Margin-bottom: 10px; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: right;">
+                  <a href="#" class="basic-link tiny-text" style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: underline;">unsubscribe from this list</a> | 
+                  <a href="#" class="basic-link tiny-text " style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 12px; font-weight: 400; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: underline;">unsubscribe from this list</a>
                 </p>
               </th>
-<th class="expander"></th>
+<th class="expander" style="Margin: 0; color: #000; font-family: Arial,sans-serif; font-size: 14px; font-weight: 400; line-height: 19px; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
         </tr>
       </table>
     </th>
             </tr></tbody></table>
           </td></tr></tbody></table>
           
-          <table class="spacer float-center"><tbody><tr><td height="50px" style="font-size:50px;line-height:50px;">&#xA0;</td></tr></tbody></table> 
+          <table class="spacer float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top;"><tbody><tr style="padding: 0; text-align: left; vertical-align: top;"><td height="50px" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #000; font-family: Arial,sans-serif; font-size: 50px; font-weight: 400; hyphens: auto; line-height: 50px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&#xA0;</td></tr></tbody></table> 
            
           </center>
         </td>
