@@ -18,7 +18,8 @@ gulp.task('inky', ['styles'], function() {
     .pipe(inlinesource())
     .pipe(inky())
     .pipe(inlineCss({
-        preserveMediaQueries: true
+        preserveMediaQueries: true,
+        removeLinkTags: false
     }))
     .pipe(gulp.dest('./dist'));
 });
